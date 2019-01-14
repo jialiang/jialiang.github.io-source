@@ -1,0 +1,68 @@
+form {
+  text-align: center;
+}
+
+form > label {
+  display: inline-block;
+  margin: 0.25em 0;
+  width: 100%;
+  line-height: 1.5;
+}
+
+form input[type="text"] {
+  float: right;
+  padding: 0.25em;
+  width: calc(100% - 7.5em);
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+input[type="button"] {
+  margin-bottom: 1em;
+  padding: 0.25em 0.5em;
+  border: none;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  background: orange;
+  font: inherit;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background: red;
+  color: white;
+}
+
+input[type="button"]:active {
+  border: none;
+}
+
+#older {
+  display: block;
+  margin: 0 0 0 auto;
+}
+
+#message {
+  text-align: center;
+}
+
+#guestbook-entries {
+  padding: 0.5em;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  list-style: none;
+}
+
+#guestbook-entries li {
+  opacity: 0;
+  animation: 1s fade-in 0.25s ease forwards;
+}
+
+#guestbook-entries h3 {
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+
+#guestbook-entries p {
+  margin: 0.5em 0;
+}

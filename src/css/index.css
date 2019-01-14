@@ -1,0 +1,68 @@
+html {
+  width: 100%;
+  height: 100vh;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+
+a {
+  color: orangered;
+  text-decoration: none;
+}
+
+.alt-link-color {
+  border-bottom: 2px dotted;
+  color: #007ab8;
+}
+
+hr {
+  display: block;
+  margin: 0.5em auto;
+  border: 1px inset lightgray;
+}
+
+section {
+  position: fixed;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#cover {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: 0.25s fade-out 0.25s forwards;
+  pointer-events: none;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,101 @@
+#koishi-float-container {
+  position: absolute;
+  top: 15vh;
+  left: calc(50vw + 52.5vh);
+  overflow: hidden;
+  width: 37.5vh;
+  height: 60vh;
+}
+
+#koishi-float {
+  position: absolute;
+  width: 330vh;
+  height: 240vh;
+  cursor: pointer;
+  background: url("../svgo/koishi-float.svgo") 0 0/100% 100% no-repeat;
+}
+
+#about:target #koishi-float {
+  animation: 1s koishi-float-move 0.36s steps(1) infinite;
+}
+
+#koishi-float:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes koishi-float-move {
+  0% {
+    transform: translate3d(0vh, 0vh, 0);
+  }
+
+  9.09% {
+    transform: translate3d(-90vh, 0vh, 0);
+  }
+
+  18.18% {
+    transform: translate3d(-180vh, 0vh, 0);
+  }
+
+  27.27% {
+    transform: translate3d(-270vh, 0vh, 0);
+  }
+
+  36.36% {
+    transform: translate3d(0vh, -90vh, 0);
+  }
+
+  45.45% {
+    transform: translate3d(-90vh, -90vh, 0);
+  }
+
+  54.55% {
+    transform: translate3d(-180vh, -90vh, 0);
+  }
+
+  63.64% {
+    transform: translate3d(-270vh, -90vh, 0);
+  }
+
+  72.73% {
+    transform: translate3d(0vh, -180vh, 0);
+  }
+
+  81.82% {
+    transform: translate3d(-90vh, -180vh, 0);
+  }
+
+  90.91% {
+    transform: translate3d(-180vh, -180vh, 0);
+  }
+
+  100% {
+    transform: translate3d(-270vh, -180vh, 0);
+  }
+}
+
+#koishi-text-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: 0.25s opacity;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+#koishi-text-container > p {
+  font-family: "Kawaii Tegaki Moji";
+  font-size: 1.25em;
+  width: 22em;
+  max-width: 100%;
+  transform: rotateZ(-2.5deg);
+}
+
+#koishi-doodle {
+  display: block;
+  width: 22em;
+  max-width: 100%;
+  max-height: 5.25em;
+  margin: 1em auto;
+}

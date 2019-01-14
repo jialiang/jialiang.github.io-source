@@ -1,0 +1,16 @@
+<script id="f-shader" type="x-shader/x-fragment">
+  precision mediump float;varying vec4 a;void main(){gl_FragColor=a;}
+</script>
+
+<script id="v-shader" type="x-shader/x-vertex">
+  attribute vec2 aVertexPosition;attribute vec4 aVertexColor;uniform mat4 uMVMatrix;varying vec4 a;void main(){gl_Position=uMVMatrix*vec4(aVertexPosition,0.,1.),a=aVertexColor;}
+</script>
+
+<script id="game-f-shader" type="x-shader/x-fragment">
+  precision mediump float;varying vec4 vColor;uniform vec2 center;uniform float expand,radius,windowHeight;
+  void main(){vec2 p=(gl_FragCoord.xy-vec2(center.x,windowHeight-center.y))/radius;float r=sqrt(dot(p,p));gl_FragColor=r<1.?mix(vec4(1.,1.,1.,1.),vColor,(r-expand)/(1.-expand)):vColor;}
+</script>
+
+<script id="game-v-shader" type="x-shader/x-vertex">
+  attribute vec2 aVertexPosition;attribute vec4 aVertexColor;uniform mat4 uMVMatrix;varying vec4 vColor;void main(){gl_Position=uMVMatrix*vec4(aVertexPosition,0.,1.),vColor=aVertexColor;}
+</script>

@@ -1,0 +1,175 @@
+figure {
+  position: relative;
+  overflow-y: hidden;
+  margin: 0;
+  height: 95vh;
+  border-radius: 3vmin;
+}
+
+#sky,
+#dark-sky {
+  position: absolute;
+  top: -0.1vh;
+  z-index: -1;
+  height: 70vh;
+}
+
+#sky {
+  width: calc(100% + 129vh);
+  background: url("../svgo/sky.svgo") 0 0/129vh 100% repeat-x, linear-gradient(to bottom, #0000bd 15%, #00f9ff, white);
+  animation: 30s sky-move linear infinite;
+}
+
+@keyframes sky-move {
+  0% {
+    transform: translateX(0vh);
+  }
+
+  100% {
+    transform: translateX(-129vh);
+  }
+}
+
+#dark-sky {
+  width: calc(100vw + 466px);
+  background: url(../image/sky.png), linear-gradient(to bottom, #111, midnightblue, cyan);
+  animation: 20s star-move linear infinite;
+}
+
+@keyframes star-move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-466px);
+  }
+}
+
+.city {
+  position: absolute;
+  top: 41vh;
+  z-index: -1;
+  width: calc(100% + 53.54vh);
+  height: 20vh;
+  background: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.25)), url("../svgo/city.svgo") 0 0 / auto 100%;
+  animation: 15s city-move linear infinite;
+}
+
+.city.reflection {
+  top: 61vh;
+  background-color: lightskyblue;
+  opacity: 0.5;
+  animation: 15s city-reflection-move linear infinite;
+}
+
+@keyframes city-move {
+  0% {
+    transform: translateX(0vh);
+  }
+
+  100% {
+    transform: translateX(-53.54vh);
+  }
+}
+
+@keyframes city-reflection-move {
+  0% {
+    transform: translateX(0vh) scaleY(-1);
+  }
+
+  100% {
+    transform: translateX(-53.54vh) scaleY(-1);
+  }
+}
+
+#godrays {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 25%, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0) 50%) -40vw 0/50vw 100%;
+}
+
+#particles {
+  position: absolute;
+  top: 11vh;
+  z-index: 12;
+  height: 20vh;
+  pointer-events: none;
+}
+
+#railings {
+  margin-top: 38vh;
+  width: calc(100% + 5vh);
+  height: 33vh;
+  background: linear-gradient(to bottom, #222, #000 8%, rgba(0, 0, 0, 0) 8%, rgba(0, 0, 0, 0) 22%, #222 22%, #000 30%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 92%, #222 92%, #000),
+  linear-gradient(to right, #222, #000 25%, rgba(0, 0, 0, 0) 25%) 0 0/5vh 100% repeat-x;
+  animation: 0.375s railings-move linear infinite;
+}
+
+@keyframes railings-move {
+  0% {
+    transform: translateX(0vh);
+  }
+
+  100% {
+    transform: translateX(-5vh);
+  }
+}
+
+#floor {
+  position: relative;
+  margin-top: -1px;
+  width: calc(100% + 12vh);
+  height: calc(11.75vh + 1px);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 50%) 0 0/12vh 100% repeat-x, linear-gradient(to bottom, #111, cyan);
+  transform-origin: top;
+  animation: 0.9s floor-move linear infinite;
+}
+
+#floor:after {
+  position: absolute;
+  width: 100%;
+  height: calc(11.75vh + 1px);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0) 50%) 0 0/12vh 100% repeat-x, linear-gradient(to bottom, yellow, burlywood);
+  content: "";
+}
+
+@keyframes floor-move {
+  0% {
+    transform: perspective(20vh) rotateX(30deg) translateX(0vh);
+  }
+
+  100% {
+    transform: perspective(20vh) rotateX(30deg) translateX(-12vh);
+  }
+}
+
+#shadow {
+  position: absolute;
+  top: 76.5vh;
+  left: calc(70% - 20vh);
+  width: 35vh;
+  height: 7.5vh;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 2vh rgba(0, 0, 0, 0.25);
+  transition: 0.25s opacity;
+}
+
+#subtitles {
+  position: absolute;
+  top: 0;
+  margin: 2.5vh 4vh;
+  width: calc(70% - 15vh);
+  text-shadow: 0 0 2px black;
+  font-size: 3vh;
+}
+
+.jpn {
+  color: white;
+}
+
+.eng {
+  color: cyan;
+}

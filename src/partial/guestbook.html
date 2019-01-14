@@ -1,0 +1,25 @@
+<section id="guestbook" class="not-mainmenu">
+  <div class="text-container">
+    <h1>Guestbook</h1>
+    <ul>
+      <li>Each IP address is limited to 1 entry per day.</li>
+      <li>Entries can only be modified by the IP address that created it.</li>
+      <li>Previous day's entries are made immutable on 0001 UTC.</li>
+      <li>All fields are mandatory except for website field.</li>
+    </ul>
+    <br />
+    <form>
+      <label>*Name <input type="text" name="name" required /> </label> <br />
+      <label>*Message <input type="text" name="message" required /> </label> <br />
+      <label>Website <input type="text" name="website" /> </label> <br />
+      <br />
+      <input id="submit" type="button" value="Insert or Update" /> <input id="delete" type="button" value="Delete" />
+      <input id="refresh" type="button" value="Refresh" />
+    </form>
+    <p id="message">Populating guestbook...</p>
+    <br />
+    <ul id="guestbook-entries"></ul>
+    <input id="older" type="button" value="Load Older" /> <br />
+    <a class="back" title="Back to Others" href="#others">Back</a>
+  </div>
+</section>

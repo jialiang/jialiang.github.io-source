@@ -1,0 +1,67 @@
+#cat-walk-container {
+  position: absolute;
+  z-index: 10;
+  top: 35vh;
+  left: calc(30% - 20vh);
+  overflow: hidden;
+  width: 30.1vh;
+  height: 13.2vh;
+}
+
+#cat-walk {
+  width: 30.1vh;
+  height: 195vh;
+  animation: 1.25s cat-walk-move steps(1) infinite;
+  background: url(../svgo/cat-walk.svgo) 0 0/30.1vh 195vh no-repeat;
+  cursor: pointer;
+}
+
+@keyframes cat-walk-move {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  9.09% {
+    transform: translateY(-15vh);
+  }
+
+  18.18% {
+    transform: translateY(-30vh);
+  }
+
+  27.27% {
+    transform: translateY(-45vh);
+  }
+
+  36.36% {
+    transform: translateY(-60vh);
+  }
+
+  45.45% {
+    transform: translateY(-75vh);
+  }
+
+  54.54% {
+    transform: translateY(-90vh);
+  }
+
+  63.63% {
+    transform: translateY(-105vh);
+  }
+
+  72.72% {
+    transform: translateY(-120vh);
+  }
+
+  81.81% {
+    transform: translateY(-135vh);
+  }
+
+  90.90% {
+    transform: translateY(-150vh);
+  }
+
+  100% {
+    transform: translateY(-165vh);
+  }
+}

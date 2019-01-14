@@ -1,0 +1,20 @@
+#neko {
+  display: block;
+  margin: 3em auto;
+  max-width: 100%;
+  max-height: 75vh;
+  height: calc(123.55vw - 4.942em);
+  cursor: url(../svgo/openhand.svgo), move;
+}
+
+.attributes {
+  margin-bottom: 0;
+}
+
+.attributes > li {
+  margin-bottom: 1.5em;
+}
+
+.attributes > li:last-child {
+  margin-bottom: 0;
+}

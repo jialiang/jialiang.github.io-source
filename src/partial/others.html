@@ -1,0 +1,111 @@
+<section id="others" class="not-mainmenu">
+  <div class="text-container">
+    <h1>Others</h1>
+
+    <h2>Issues</h2>
+    <p>
+      At the time of writing, this website was tested to render and function correctly on the latest version of Chrome, Opera, Firefox and Edge on Windows and Android as well as
+      Internet Explorer 11 on Windows.
+    </p>
+    <br />
+    <p>Performance-wise, this website was found to consistently run at a satisfactory framerate on an Android smartphone powered by a Snapdragon 625 SoC and 3GB of ram.</p>
+    <br />
+    <p>
+      You can report any issues encountered on
+      <a href="https://github.com/jialiang/jialiang.github.io/issues" title="Report issues on Github" target="_blank" rel="noopener">Github</a>.
+    </p>
+    <br />
+    <br />
+
+    <h2>Attribution</h2>
+    <ul class="attributes">
+      <li>
+        Touhou Project and all its characters are properties of Team Shanghai Alice. <br />
+        <a href="http://www.geocities.co.jp/Playtown-Yoyo/1736/t-081-2.html" title="Team Shanghai Alice's FAQ on Deriviative Works" target="_blank" rel="noopener">
+          Team Shanghai Alice's FAQ on Deriviative Works
+        </a>
+        <br />
+        <a class="alt-link-color" href="${require("../screenshot/ss1.png")}" title="Screenshot of Team Shanghai Alice's FAQ on Deriviative Works" target="_blank" rel="noopener">screenshot</a>
+      </li>
+
+      <li>
+        The song "Hartmann's Youkai Girl ~ Subterranean Rose" is used with permission from Chie. <br />
+        <a href="http://ch.nicovideo.jp/chair/blomaga/ar691457" title="Chie's Touhou Support BGM Summary Page" target="_blank" rel="noopener">
+          Chie's Touhou BGM Support Summary Page
+        </a>
+        <br />
+        <a class="alt-link-color" href="${require("../screenshot/ss2.png")}" title="Screenshot of Chie's Touhou Support BGM Summary Page" target="_blank" rel="noopener">screenshot</a>
+      </li>
+
+      <li>The song "Tsukiakari" is written and performed by Rie Fu and published by Myrica Music, Inc.</li>
+
+      <li>
+        The font Roboto from Google is used under the Apache License, Version 2.0. <br />
+        <a href="https://github.com/google/roboto/blob/master/LICENSE" title="Roboto's License Page" target="_blank" rel="noopener"> Roboto's License Page </a> <br />
+        <a class="alt-link-color" href="${require("../screenshot/ss3.png")}" title="Screenshot of Roboto's License Page" target="_blank" rel="noopener">screenshot</a>
+      </li>
+
+      <li>
+        The font Kawaii Tegaki Moji is used with permission from Spicy-Sweet. <br />
+        <a href="http://font.spicy-sweet.com/" title="Spicy-Sweet's Homepage" target="_blank" rel="noopener"> Spicy-Sweet's Homepage </a> <br />
+        <a class="alt-link-color" href="${require("../screenshot/ss4.png")}" title="Screenshot of Spicy-Sweet's Homepage" target="_blank" rel="noopener">screenshot</a>
+      </li>
+
+      <li>
+        The library Fastdom by Wilson Page is used under the MIT License. <br />
+        <a href="https://github.com/wilsonpage/fastdom" title="Fastdom's Github Page" target="_blank" rel="noopener"> Fastdom's Github Page </a> <br />
+        <a class="alt-link-color" href="${require("../screenshot/ss5.png")}" title="Screenshot of Fastdom's Github Page" target="_blank" rel="noopener">screenshot</a>
+      </li>
+    </ul>
+    <br />
+    <br />
+
+    <h2>Guestbook</h2>
+    <p>
+      Thank you for making it to the end of this website! Before you leave, you can leave an entry in the Guestbook to ackonowledge your visit or to comment on your experience.
+    </p>
+    <a href="#guestbook" title="Guestbook" class="internal-link">Guestbook</a>
+    <p>
+      The guestbook is hosted in Amazon's Ashburn, Virginia datacenter on an instance managed by Heroku and uses Cloudinary for persistent storage. It is the world's fastest NodeJS
+      guestbook with an in-memory database for sub-millisecond data access and interoperability with native C libraries for super fast request handling.
+    </p>
+    <br />
+    <p>Load test results using Bombardier (flags: -c 100 -d 5s) ran against a local server to retrieve and list 3 entries are as follows:</p>
+    <ul>
+      <li>Average reqs/sec: 11698.23</li>
+      <li>Average latency: 8.54ms</li>
+    </ul>
+    <p>For comparison, a simple ExpressJS Hello World application in the same environment:</p>
+    <ul>
+      <li>Average reqs/sec: 9730.06</li>
+      <li>Average latency: 10.26ms</li>
+    </ul>
+    <p>You can view the <a href="https://github.com/jialiang/super-simple-guestbook" title="Guestbook Git repository" target="_blank" rel="noopener">Git Repository</a> here.</p>
+    <br />
+    <br />
+
+    <h2>Lucky Cat</h2>
+    <p>Rub on the Lucky Cat to get a lucky number!</p>
+    <br />
+    <p>
+      The lucky cat acts as a good luck charm for this website. The oval shaped object that it is holding is called a Koban. The characters on the coin read "Sen Man Ryo" which
+      means 10 million Ryo. 1 Ryo was considered equivalent to the amount of rice needed to feed a person for a year. If you would like to know more about Lucky Cats in general,
+      you should give <a href="https://luckymanekineko.wordpress.com/" title="Lucky Maneki Neko" target="_blank" rel="noopener noreferrer">Lucky Maneki Neko</a> a visit.
+    </p>
+    <br />
+    <p>
+      Instead of some phony pseudo-random number generator, the number generator implemented for the Lucky Cat is a high quality true random number generator based on chaotic tent
+      maps as described by Zhou et al. in this
+      <a href="${require("../pdf/1-s2.0-S0020025509002540-main.pdf")}" title="True random number generator based on mouse movement by Zhou et al." target="_blank" rel="noopener noreferrer">
+        journal article
+      </a>
+      .
+    </p>
+    <br />
+    <p><span id="number-history">Drawn Numbers: </span></p>
+
+    ${require("./luckycat.html")} <br />
+
+    <a class="back" title="Back to Mainmenu" href="#">Back</a>
+  </div>
+</section>

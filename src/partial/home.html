@@ -1,0 +1,70 @@
+<section id="mainmenu" class="show-ori-theme">
+  <header>
+    <hgroup>
+      <h1>Jia Liang</h1>
+      <h2>Software Engineer</h2>
+    </hgroup>
+    <address class="super-widescreen-exclusive">hojialiang@yahoo.com</address>
+  </header>
+
+  <figure>
+    <div id="sky" class="ori-theme"></div>
+    <div id="dark-sky" class="alt-theme"></div>
+
+    <div class="city ori-theme"></div>
+    <div class="city reflection ori-theme"></div>
+    <div id="godrays" class="ori-theme"></div>
+
+    <canvas id="particles"></canvas>
+
+    <div id="railings"></div>
+    <div id="floor"></div>
+
+    <div id="shadow" class=""></div>
+
+    <div id="koishi-walk-container">
+      <div id="koishi-walk-leg" class="ori-theme"></div>
+      <div id="koishi-walk-body" class="ori-theme"></div>
+    </div>
+
+    <div class="curtain left start-animation" role="presentation"></div>
+    <div class="curtain right start-animation" role="presentation"></div>
+    <div class="curtain top start-animation" role="presentation"></div>
+    <div class="curtain bottom start-animation" role="presentation"></div>
+
+    <div id="subtitles" class="alt-theme"></div>
+  </figure>
+
+  <div id="cat-walk-container">
+    <div id="cat-walk" class="widescreen-exclusive"></div>
+  </div>
+
+  <div id="yin-walk-container">
+    <div id="yin-walk-leg" class="alt-theme"></div>
+    <div id="yin-walk-body" class="alt-theme"></div>
+    <video id="bonus-bgm" preload="auto">
+      <source src="${require("../music/Tsukiakari.ac3")}" type="audio/ac3" />
+      <source src="${require("../music/Tsukiakari.mp3")}" type="audio/mpeg" />
+      <track label="subtitles" kind="subtitles" srclang="en" src="${require("../music/Tsukiakari.vtt")}" default />
+    </video>
+  </div>
+
+  <div id="frame-text-overlay"></div>
+
+  <div id="intro-animation" class="start-animation" role="presentation">
+    <div class="left start-animation"></div>
+    <div class="right start-animation"></div>
+  </div>
+
+  <nav class="start-animation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#others">Others</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    <p>Last Modified: ${(new Date()).toISOString().split('T')[0]}</p>
+  </footer>
+</section>

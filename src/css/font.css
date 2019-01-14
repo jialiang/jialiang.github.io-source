@@ -1,0 +1,20 @@
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url(../font/Roboto-Medium-subset.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Roboto";
+  src: url(../font/Roboto-Bold-subset.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Kawaii Tegaki Moji";
+  src: url(../font/KAWAIITEGAKIMOJI-subset.woff) format("woff");
+}

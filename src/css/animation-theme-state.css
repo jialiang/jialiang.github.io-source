@@ -1,0 +1,22 @@
+.skip-start-animation .start-animation,
+.skip-start-animation .start-animation:before,
+.skip-start-animation .start-animation:after {
+  animation: none !important;
+}
+
+.no-transition .not-mainmenu,
+.no-transition .not-mainmenu h1 {
+  transition: none !important;
+}
+
+.show-ori-theme .alt-theme,
+.show-alt-theme .ori-theme {
+  cursor: auto !important;
+  animation-play-state: paused !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.show-alt-theme #floor:after {
+  opacity: 0;
+}

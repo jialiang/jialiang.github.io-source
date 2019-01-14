@@ -1,0 +1,49 @@
+@media (max-aspect-ratio: 1/1) {
+  .widescreen-exclusive {
+    transition: none !important;
+    animation-play-state: paused !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (max-aspect-ratio: 18/10) {
+  .super-widescreen-exclusive {
+    transition: none !important;
+    animation-play-state: paused !important;
+    display: none !important;
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  hgroup > h1 {
+    font-size: 6.25vh;
+  }
+
+  #koishi-walk-container,
+  #shadow {
+    left: calc(70% - 25vh);
+  }
+
+  #yin-walk-container {
+    left: calc(70% - 20vh);
+  }
+
+  #subtitles {
+    display: none;
+  }
+
+  nav {
+    width: 27vh;
+    height: 27vh;
+  }
+
+  nav ul {
+    margin: 3.25vh auto;
+  }
+
+  nav a {
+    font-size: 3.5vh;
+    margin: 1.25vh 0;
+  }
+}

@@ -1,0 +1,114 @@
+#yin-walk-container {
+  position: absolute;
+  top: 15.5vh;
+  left: calc(70% - 15vh - 3vmin);
+  z-index: 10;
+  overflow: hidden;
+  width: 30vh;
+  height: 80vh;
+  transition: 0.25s opacity;
+}
+
+#yin-walk-container > video {
+  display: none;
+}
+
+#yin-walk-body,
+#yin-walk-leg {
+  background: url(../image/yin-walk.svg) 0 0/320vh 320vh no-repeat;
+  transition: 0.25s opacity;
+}
+
+#yin-walk-body {
+  position: absolute;
+  left: -25vh;
+  width: 80vh;
+  height: 80vh;
+  background-position: -240vh -160vh;
+  cursor: pointer;
+  animation: 1.5s yin-walk-body-move ease infinite;
+}
+
+@keyframes yin-walk-body-move {
+  0% {
+    transform: translateX(0.625%);
+  }
+
+  45% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translateX(0.625%);
+  }
+
+  100% {
+    transform: translateX(0.625%);
+  }
+}
+
+#yin-walk-leg {
+  position: absolute;
+  margin-left: -25vh;
+  width: 320vh;
+  height: 320vh;
+  animation: 1.5s yin-walk-leg-move steps(1) infinite;
+}
+
+@keyframes yin-walk-leg-move {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  7.69% {
+    transform: translateY(-80vh);
+  }
+
+  15.38% {
+    transform: translateY(-160vh);
+  }
+
+  23.08% {
+    transform: translateY(-240vh);
+  }
+
+  30.77% {
+    transform: translateY(0vh) translateX(-80vh);
+  }
+
+  38.46% {
+    transform: translateY(-80vh) translateX(-80vh);
+  }
+
+  46.15% {
+    transform: translateY(-160vh) translateX(-80vh);
+  }
+
+  53.85% {
+    transform: translateY(-240vh) translateX(-80vh);
+  }
+
+  61.54% {
+    transform: translateY(0vh) translateX(-160vh);
+  }
+
+  69.23% {
+    transform: translateY(-80vh) translateX(-160vh);
+  }
+
+  76.92% {
+    transform: translateY(-160vh) translateX(-160vh);
+  }
+
+  84.62% {
+    transform: translateY(-240vh) translateX(-160vh);
+  }
+
+  92.31% {
+    transform: translateY(0vh) translateX(-240vh);
+  }
+
+  100% {
+    transform: translateY(-80vh) translateX(-240vh);
+  }
+}

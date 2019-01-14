@@ -1,0 +1,126 @@
+.not-mainmenu {
+  opacity: 0;
+  transition: 0.25s transform, 0.25s opacity;
+  transform: translate3d(0, 100vh, 0);
+}
+
+.not-mainmenu:target {
+  opacity: 1;
+  transform: translate3d(0vw, 0, 0);
+}
+
+.not-mainmenu:target ~ #mainmenu > header,
+.not-mainmenu:target ~ #mainmenu #frame-text-overlay,
+.not-mainmenu:target ~ #mainmenu #cat-walk-container > div,
+.not-mainmenu:target ~ #mainmenu #koishi-walk-container > div,
+.not-mainmenu:target ~ #mainmenu #yin-walk-container > div,
+.not-mainmenu:target ~ #mainmenu #shadow,
+.not-mainmenu:target ~ #mainmenu nav,
+.not-mainmenu:target ~ #mainmenu > footer {
+  opacity: 0 !important;
+  animation-play-state: paused !important;
+}
+
+.text-container {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1em 2em 2em 2em;
+  min-height: 100%;
+  max-width: 100%;
+  width: 100vh;
+  background: white;
+  box-shadow: 0 0 2.5vh rgba(0, 0, 0, 0.5);
+  color: #333;
+}
+
+.text-container > h1 {
+  margin: 1em auto 1.5em auto;
+  width: 6em;
+  border-radius: 2px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  transition: 0.25s transform 0.35s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.not-mainmenu:target > .text-container h1 {
+  transform: scaleX(1);
+}
+
+.text-container h2 {
+  margin: 1.15em 0 0.75em 0;
+  color: black;
+  font-size: 1.75em;
+}
+
+.text-container p {
+  margin: auto;
+  line-height: 1.5;
+}
+
+.text-container ul {
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding-left: 1em;
+  max-width: 100%;
+}
+
+.text-container li {
+  margin-bottom: 0.5em;
+}
+
+.back,
+.internal-link {
+  display: block;
+  box-sizing: border-box;
+  margin: 2em auto 0 auto;
+  padding: 0.5em;
+  width: 7em;
+  border: 1px solid black;
+  border-radius: 2em;
+  background: orange;
+  box-shadow: 0.25em 0.25em 0 black;
+  color: black;
+  text-align: center;
+}
+
+.internal-link {
+  margin: 1em 0 1.5em calc(50% - 3.5em);
+}
+
+.back:hover,
+.internal-link:hover {
+  border: 1px solid red;
+  background: red;
+  box-shadow: none;
+  color: white;
+}
+
+.x {
+  position: fixed;
+  right: 0;
+  z-index: 99;
+  visibility: hidden;
+  width: 1.25em;
+  border: 0.25em solid white;
+  background: darkgray;
+  color: white;
+  text-align: center;
+  font-size: 1.25em;
+  line-height: 1.25em;
+}
+
+.x:hover {
+  background: black;
+}
+
+.not-mainmenu:target ~ .x {
+  visibility: visible;
+}
+
+.text-center {
+  text-align: center;
+}

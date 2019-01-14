@@ -1,0 +1,160 @@
+.construction {
+  height: 2.5vh;
+  border: 2px solid black;
+  background: linear-gradient(to bottom right, yellow 25%, black 25%, black 50%, yellow 50%) -2.5vh 0/5vh 10vh;
+}
+
+#game {
+  margin: auto;
+  max-width: 100%;
+  width: 100vh;
+  background: white;
+  box-shadow: 0 2.5vh 2.5vh rgba(0, 0, 0, 0.5);
+}
+
+#game-score {
+  text-align: center;
+  padding: calc(2.5vh - 0.5em) 0;
+}
+
+#game-container {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: auto;
+  width: 100vmin;
+  height: calc(100vmin - 5vh);
+  border: 2.5vmin solid white;
+  border-top: none;
+}
+
+#game-background {
+  position: absolute;
+  width: 100%;
+  height: 105vh;
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0), black), linear-gradient(to bottom right, black, #211a10, black) 0 0/2.5vmin 2.5vmin;
+  animation: 0.25s game-background-move linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes game-background-move {
+  0% {
+    transform: translateY(-4.762%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#work:target #game-background {
+  animation-play-state: running;
+}
+
+#touhou {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  pointer-events: none;
+}
+
+#reisen-sprite {
+  position: absolute;
+  top: -6.25vmin;
+  left: -2.56vmin;
+  visibility: hidden;
+  width: 5.12vmin;
+  height: 12.5vmin;
+  background: url("../svgo/reisen-sprite.svgo") 0 0/5.12vmin 12.5vmin no-repeat;
+}
+
+#reisen-sprite.blink {
+  animation: 0.2s reisen-blink linear infinite;
+}
+
+@keyframes reisen-blink {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#koishi-sprite {
+  position: absolute;
+  top: -7.5vmin;
+  left: -5.55vmin;
+  visibility: hidden;
+  width: 11.1vmin;
+  height: 15vmin;
+  background: url("../svgo/koishi-sprite.svgo") 2vmin 0/7.1vmin 15vmin no-repeat;
+}
+
+#heart-container {
+  position: absolute;
+  top: -92vmin;
+  left: -0.89vmin;
+  visibility: hidden;
+  overflow: hidden;
+  width: 1.78vmin;
+  height: 90vmin;
+}
+
+#heart-stream {
+  position: absolute;
+  width: 1.78vmin;
+  height: 93.55vmin;
+  background: url("../svgo/heartstream.svgo") 0 0/1.78vmin 1.78vmin repeat-y;
+  animation: 0.075s heart-stream-move linear infinite;
+  animation-play-state: paused;
+}
+
+#work:target #heart-stream {
+  animation-play-state: running;
+}
+
+@keyframes heart-stream-move {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(-1.78vh);
+  }
+}
+
+#game-controls {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+#game-controls > p {
+  margin: calc(50% - 2.5em) auto 2em auto;
+  padding: 0.25em 0;
+  background: darkorange;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  opacity: 0;
+}
+
+#game-controls > p::selection,
+#game-controls > button::selection {
+  background: rgba(0, 0, 0, 0);
+}
+
+#game-controls > button {
+  display: block;
+  margin: 1em auto;
+  padding: 0.15em 0.5em;
+  background: black;
+  color: burlywood;
+  font-weight: bold;
+  cursor: pointer;
+}

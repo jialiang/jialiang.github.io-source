@@ -1,0 +1,117 @@
+#koishi-walk-container {
+  position: absolute;
+  z-index: 13;
+  top: 2.5vh;
+  left: calc(70% - 20vh);
+  overflow: hidden;
+  width: 39.4vh;
+  height: 80vh;
+  transition: 0.25s opacity;
+  pointer-events: none;
+}
+
+#koishi-walk-body,
+#koishi-walk-leg {
+  transition: 0.25s opacity;
+  background: url(../svgo/koishi-walk.svgo) 0 0/157.62vh 400vh no-repeat;
+}
+
+#koishi-walk-body {
+  position: absolute;
+  left: 1vh;
+  width: 39.4vh;
+  height: 80vh;
+  animation: 1.5s koishi-walk-body-move linear infinite;
+  background-position: 0 -320vh;
+}
+
+@keyframes koishi-walk-body-move {
+  0% {
+    transform: translateX(1.269%);
+  }
+
+  45% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translateX(1.269%);
+  }
+
+  100% {
+    transform: translateX(1.269%);
+  }
+}
+
+#koishi-walk-leg {
+  position: absolute;
+  width: 157.62vh;
+  height: 400vh;
+  animation: 1.5s koishi-walk-leg-move steps(1) infinite;
+}
+
+@keyframes koishi-walk-leg-move {
+  0% {
+    transform: translate3d(0vh, 0vh, 0);
+  }
+
+  6.67% {
+    transform: translate3d(-39.4vh, 0vh, 0);
+  }
+
+  13.33% {
+    transform: translate3d(-78.8vh, 0vh, 0);
+  }
+
+  20% {
+    transform: translate3d(-118.2vh, 0vh, 0);
+  }
+
+  26.67% {
+    transform: translate3d(0vh, -80vh, 0);
+  }
+
+  33.33% {
+    transform: translate3d(-39.4vh, -80vh, 0);
+  }
+
+  40% {
+    transform: translate3d(-78.8vh, -80vh, 0);
+  }
+
+  46.67% {
+    transform: translate3d(-118.2vh, -80vh, 0);
+  }
+
+  53.33% {
+    transform: translate3d(0vh, -160vh, 0);
+  }
+
+  60% {
+    transform: translate3d(-39.4vh, -160vh, 0);
+  }
+
+  66.67% {
+    transform: translate3d(-78.8vh, -160vh, 0);
+  }
+
+  73.33% {
+    transform: translate3d(-118.2vh, -160vh, 0);
+  }
+
+  80% {
+    transform: translate3d(0vh, -240vh, 0);
+  }
+
+  86.67% {
+    transform: translate3d(-39.4vh, -240vh, 0);
+  }
+
+  93.33% {
+    transform: translate3d(-78.8vh, -240vh, 0);
+  }
+
+  100% {
+    transform: translate3d(-118.2vh, -240vh, 0);
+  }
+}
