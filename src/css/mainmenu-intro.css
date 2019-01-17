@@ -8,7 +8,7 @@
   border-top-left-radius: 3vmin;
   border-top-right-radius: 3vmin;
   box-shadow: 0 0 1.5vmin rgba(0, 0, 0, 0.25);
-  animation: 0s intro-z-index 1s steps(1) both;
+  animation: 0s intro-z-index 1.125s steps(1) both;
 }
 
 @keyframes intro-z-index {
@@ -34,7 +34,7 @@
   background: gold linear-gradient(to bottom, gold 50%, white 50%) calc(100% - 1.25vmin) 0/1.25vmin 2.5vmin repeat-y;
   transform: translate3d(0%, 100%, 0);
   transform-origin: top left;
-  animation: 0.5s intro-left-move 0.5s ease both;
+  animation: 0.6s intro-left-move 0.5s both;
 }
 
 #intro-animation > .right {
@@ -42,7 +42,7 @@
   background: yellow linear-gradient(to bottom, yellow 50%, black 50%) 1.25vmin 0/1.25vmin 2.5vmin repeat-y;
   transform: translate3d(0%, -100%, 0);
   transform-origin: bottom right;
-  animation: 0.5s intro-right-move 0.5s ease both;
+  animation: 0.6s intro-right-move 0.5s both;
 }
 
 @keyframes intro-left-move {
@@ -82,7 +82,7 @@
   height: 85.5vh;
   transform: scaleX(0);
   transform-origin: left;
-  animation: 0.5s curtain-scale-x 0.9s ease both;
+  animation: 0.5s curtain-scale-x 1.15s both;
 }
 
 .curtain.right {
@@ -92,7 +92,7 @@
   height: 85.5vh;
   transform: scaleX(0);
   transform-origin: right;
-  animation: 0.5s curtain-scale-x 0.9s ease both;
+  animation: 0.5s curtain-scale-x 1.15s both;
 }
 
 .curtain.top {
@@ -102,7 +102,7 @@
   height: 42.75vh;
   transform: scaleY(0);
   transform-origin: top;
-  animation: 0.5s curtain-scale-y 0.9s ease both;
+  animation: 0.5s curtain-scale-y 1.15s both;
 }
 
 .curtain.bottom {
@@ -112,7 +112,7 @@
   height: 42.75vh;
   transform: scaleY(0);
   transform-origin: bottom;
-  animation: 0.5s curtain-scale-y 0.9s ease both;
+  animation: 0.5s curtain-scale-y 1.15s both;
 }
 
 @keyframes curtain-scale-x {

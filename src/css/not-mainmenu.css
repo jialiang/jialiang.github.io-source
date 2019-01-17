@@ -1,6 +1,6 @@
 .not-mainmenu {
   opacity: 0;
-  transition: 0.25s transform, 0.25s opacity;
+  transition: 0.25s transform ease-out, 0.25s opacity linear;
   transform: translate3d(0, 100vh, 0);
 }
 
@@ -41,7 +41,7 @@
   color: white;
   text-align: center;
   font-size: 2em;
-  transition: 0.25s transform 0.35s;
+  transition: 0.25s transform 0.25s;
   transform: scaleX(0);
   transform-origin: right;
 }
