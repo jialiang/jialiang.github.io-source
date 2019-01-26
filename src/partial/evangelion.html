@@ -1,0 +1,36 @@
+<section id="evangelion" class="not-mainmenu">
+  <div class="text-container">
+    <h1>Cruel Angel's Thesis</h1>
+    <p>This project was done for fun and also to determine the feasibility of using CSS linear gradients to represent display fluid pixel art with more than 10,000 pixels.</p>
+    <br />
+    <br />
+
+    <p class="text-center"><a href="Cruel-Angel-s-Thesis" title="Cruel Angel's Thesis" target="_blank" rel="noopener">&#9632; Visit it here.</a></p>
+    <br />
+    <br />
+
+    <p>
+      According to the CSS Images Module Level 3 specification, the value "crisp-edges" should be used for the image-rendering propery when scaling pixel art. However, at the time of writing, Edge does not support this value. While some browsers roll with their own non-standard name for this value: "-webkit-optimize-contrast" for Chrome and Safari and "-o-crisp-edges" for Opera. Then we have Internet Explorer with its own "-ms-interpolation-mode: nearest-neighbor" declaration for this behavior. Thus I felt that this property value is unsuitable for production sites at the moment.
+    </p>
+    <br />
+
+    <p>
+      Currently, the box-shadow property is most often used to represent pixel art but it doesn't scale as well as linear gradient performance-wise. For one, linear gradients can express neighbouring pixels of the same color together as one color-stop while box shadow requires each pixel to have its own value. Besides that, though my own testing on Jsperf, each additional box shadow value also incurs a higher performance hit than each additonal color-stop in a linear gradient. <a href="https://jsperf.com/gradient-test/2" title="Gradient vs Box-shadow" target="_blank" rel="noopener">Here</a>, you can see that for this project, a linear gradient solution is almost 300% faster than its box shadow counterpart.
+    </p>
+    <br />
+
+    <p>
+      For this project, the source image comes from episode 19 of the Evangelion series. GIMP and Pixelator were used to convert it into pixel art. Next, Javier Borquez's img2css tool is used to convert the pixel art into box-shadow values. Finally, it is fed into my own custom script that converts each column into its own linear gradient and optimises them by merging all vertical neighbours of the same colour into a single color-stop.
+    </p>
+    <br />
+
+    <p>
+      The music video is from the "Neon Genesis Evangelion - 01 -Test-Type" DVD; Vocal and lyrics is courtesy of <a href="https://www.youtube.com/user/geekyfandubs" title="Geeky Fandubs" target="_blank" rel="noopener">Geeky Fandubs</a>; English localisation and video editing is courtesy of <a href="http://www.darksidetranslations.com/" title="Darkside Translations" target="_blank" rel="noopener">Darkside Translations</a>.
+    </p>
+    <br />
+
+    <p>This project is made with 100% locally hand-crafted code.</p>
+    <br />
+    <a class="back" title="Back to Others" href="#work">Back</a>
+  </div>
+</section>
